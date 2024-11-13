@@ -1,0 +1,117 @@
+/* General Reset and Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Main Container */
+#mainContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-start;
+  width: 100%;
+  height: 80vh; /* Take up most of the viewport height */
+  padding: 10px;
+}
+
+/* Left Section: Toolbox and Workspace */
+#leftSection {
+  display: flex;
+  flex-direction: column;
+  width: 65%; /* Default width for the left section */
+  height: 100%;
+  overflow: hidden;
+}
+
+#toolboxArea {
+  width: 100%;
+  padding: 20px;
+  background-color: #ffeb3b;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#blocklyArea {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#blocklyDiv {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+}
+
+/* Divider Style */
+#divider {
+  cursor: ew-resize;
+  background-color: #4caf50; /* Green divider */
+  width: 10px;
+  height: 100%;
+}
+
+/* Right Section: Code Display and Output */
+#rightSection {
+  width: 35%; /* Default width for the right section */
+  padding: 20px;
+  background-color: #ff5722;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  height: 100%;
+}
+
+#outputArea h2 {
+  color: #fff;
+}
+
+#codeDisplay {
+  background-color: #333;
+  color: #ffeb3b;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  text-align: left;
+  height: 200px; /* Set a fixed height for the code display area */
+}
+
+#runCode {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+#output {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#outputText {
+  background-color: #333;
+  color: #ffeb3b;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  min-height: 100px;
+}

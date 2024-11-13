@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Blockly Editor for Kids</title>
+    <link rel="stylesheet" href="style.css" />
+    
+    <!-- Include Blockly -->
+    <script src="https://unpkg.com/blockly/blockly_compressed.js"></script>
+    <script src="https://unpkg.com/blockly/python_compressed.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+    <script src="blocks.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Python Blockly Editor for Kids</h1>
+    <div id="mainContainer">
+      <!-- Left Section: Toolbox with Fun Icons -->
+      <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+        <!-- Basic Blocks -->
+        <category name="Basic" colour="#5CA65C" icon="images/basic-icon.png">
+          <block type="print_block"></block>
+          <block type="text_block"></block>
+          <block type="define_variable_block"></block>
+          <block type="use_variable_block"></block>
+        </category>
+
+        <!-- Math Blocks -->
+        <category name="Math" colour="#5C81A6" icon="images/math-icon.png">
+          <block type="math_number"></block>
+          <block type="math_arithmetic"></block>
+        </category>
+
+        <!-- Logic Blocks -->
+        <category name="Logic" colour="#5C68A6" icon="images/logic-icon.png">
+          <block type="controls_if"></block>
+          <block type="logic_compare"></block>
+          <block type="logic_operation"></block>
+          <block type="logic_negate"></block>
+        </category>
+
+        <!-- Loops Blocks -->
+        <category name="Loops" colour="#A6745C" icon="images/loops-icon.png">
+          <block type="controls_while"></block>
+        </category>
+
+        <!-- Functions Blocks -->
+        <category name="Functions" colour="#9A5CA6" icon="images/functions-icon.png">
+          <block type="procedures_defnoreturn"></block>
+        </category>
+      </xml>
+
+      <!-- Left Section: Toolbox + Blockly Workspace -->
+      <div id="leftSection">
+        
+        <div id="blocklyArea">
+          <div id="blocklyDiv"></div>
+        </div>
+      </div>
+
+      <!-- Draggable Divider -->
+      <div id="divider"></div>
+
+      <!-- Right Section: Code Display and Output -->
+      <div id="rightSection">
+        <div id="outputArea">
+          <h2>Generated Python Code</h2>
+          <pre id="codeDisplay"></pre>
+          <button id="runCode">Run Code</button>
+          <div id="output">
+            <h2>Output</h2>
+            <div id="outputText"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
